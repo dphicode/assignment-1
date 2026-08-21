@@ -1,0 +1,52 @@
+
+1. Copy chaos.py into a new file called chaos1.py. Modify chaos1.py by changing the value of k to
+
+some value between 0 and 1, excluding 0 and 1. Modify the number of times the loop goes to
+
+30. Try running your program with three different starting values. What do you observe? In other
+
+words, what is the trend in the output for each starting value (the most important output to
+
+consider is probably the final one)?
+
+##############
+Answer: Entering a value of 0 or 1 yields 0's. Otherwise, the output seems to increase and decrease with every row.
+##############
+
+
+
+2. Copy chaos1.py into chaos2.py. Modify chaos2.py by changing the value of k to some value
+
+between 1 and 2, exclusive. Try running your program with three different starting values. What
+
+do you observe? In other words, what is the trend in the output for each starting value (the most
+
+important output to consider is probably the final one)?
+
+##############
+Answer: The values seem to alternate between two distinct values after the first few iterations. I used .1 and .5 as my input.
+##############
+
+
+3. Copy chaos2.py into chaos3.py. Modify chaos3.py by changing the value of k to some value
+
+between 3 and 3.44949, exclusive. Try running your program with three different starting values.
+
+What do you observe? In other words, what is the trend in the output for each starting value (the
+
+most important output to consider is probably the last couple)?
+
+##############
+Answer: The values alternate between .8* and .4* with each iteration.
+##############
+
+
+4. Copy chaos3.py into chaos4.py. Modify chaos4.py by changing the value of k to some value
+
+between 3.44949 and 3.54409. Try running your program with three different starting values.
+
+What do you observe? In other words, what is the trend in the output for each starting value?
+
+##############
+Answer: I used 3.54409; The sequence I see repeating is .3*, .8*, .5*, .8*
+##############
