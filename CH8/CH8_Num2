@@ -1,0 +1,23 @@
+def cypher(plaintext, rows):
+    cols = len(plaintext) // rows
+    ciphertext = ""
+    for c in range(cols):
+        for r in range(rows):
+            ciphertext += plaintext[r * cols + c]
+    return ciphertext
+
+def decipher(ciphertext, rows):
+    cols = len(ciphertext) // rows
+    plaintext = ""
+    for r in range(rows):
+        for c in range(cols):
+            plaintext += ciphertext[c * rows + r]
+    return plaintext
+
+msg = "PGMNIPHIORRMGTYOSOOAIWHTNCL"
+
+secret = cypher(msg, 3)
+print("Encrypted:", secret)
+
+original = decipher(secret, 3)
+print("Decrypted:", original)

@@ -1,0 +1,16 @@
+def encode(msg, key):
+    k = key.upper()
+    return "".join(
+        chr((ord(c) + ord(k[i % len(k)]) - 130) % 26 + 65)
+        if c.isalpha() else c for i, c in enumerate(msg.upper())
+    )
+
+def decode(msg, key):
+    rev_key = "".join(chr(156 - ord(c)) for c in key.upper())
+    return encode(msg, rev_key)
+
+key = input("Keyword: ")
+msg = input("Message: ")
+enc = encode(msg, key)
+print("\nEncoded:", enc)
+print("Decoded:", decode(enc, key))

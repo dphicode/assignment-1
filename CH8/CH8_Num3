@@ -1,0 +1,24 @@
+abc = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
+
+def encode(message, nums):
+    encoded = ""
+    for i, char in enumerate(message.lower()):
+        shift = nums[i % len(nums)]
+        encoded += abc[abc.index(char) + shift]
+    return encoded
+
+def decode(message, nums):
+    decoded = ""
+    for i, char in enumerate(message):
+        shift = nums[i % len(nums)]
+        decoded += abc[abc.index(char, 26) - shift]
+    return decoded
+
+msg = input("Message (letters only): ")
+msg = msg.replace(" ","")
+date = input("Date digits only: ")
+date_nums = [int(x) for x in date]
+encrypted = encode(msg, date_nums)
+decrypted = decode(encrypted, date_nums)
+print("Encoded:", encrypted)
+print("Decoded:", decrypted)
